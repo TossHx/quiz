@@ -65,6 +65,26 @@
       };
       questions.push(question);
       // ----- for additional questions, copy TO here  
+      
+      // ----- for additional questions, copy FROM here
+      question = {
+        data: [
+          {"Bonn": false}, 
+          {"Frankfurt": false}, 
+          {"München": false}, 
+          {"Berlin": true},  
+          ],
+        heading: "Was ist die Hauptstadt von Deutschland? ",
+        // subHeading: "Kontext zu Frage 2",
+        // resultHtml: "War das wirklich so <b>schwer</b>?",
+        unit: "Mio",
+        precision: 3,
+        // lastPointShownAt: ,
+        // yAxisMin: ,
+        // yAxisMax: , 
+      };
+      questions.push(question);
+      // ----- for additional questions, copy TO here 
 
       var myChart = youdrawit
         .chart()
