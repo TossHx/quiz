@@ -23,7 +23,7 @@
          drawBar: "Ziehe den Balken\nauf die entsprechende Höhe",
         // resultButtonText: "Zeig mir die Lösung!",
          resultButtonTooltip: "Zeichne Deine Einschätzung. Der Klick verrät, ob sie stimmt.",
-        // showScore: true,
+         showScore: true,
         // scoreButtonText: "Zeig mir, wie gut ich war!",
         // scoreButtonTooltip: "Klicke hier, um das Gesamtergebnis zu sehen",
         // scoreTitle: "Dein Ergebnis:",
@@ -34,19 +34,19 @@
       // ----- for additional questions, copy FROM here
       question = { 
         data: [
-          {Dezemberanfang: 1}, 
-          {Nikolaus: 6}, 
-          {Luzienfest: 13}, 
-          {Weihnachten: 25},
+          {"1. Dezember": 1}, 
+          {"Nikolaus": 6}, 
+          {"Luzienfest": 13}, 
+          {"Weihnachten": 25},
           ],
         heading: "Wieviele Tage sind es vom 30.November bis",
         // subHeading: "Wieviele Tage sind es vom 30.November bis",
         resultHtml: "Luzia, da schwimmen die Lichthäuser auf der Amper",
         // unit: "Mio",
-        precision: 1,
-        //lastPointShownAt: {Dezemberanfang: 1},
-        yAxisMin: 0,
-        yAxisMax:40,
+        //precision: 1,
+        lastPointShownAt: {Dezemberanfang},
+        yAxisMin:  0,
+        yAxisMax: 40,
       };
       questions.push(question);
       // ----- for additional questions, copy TO here     
@@ -74,9 +74,9 @@
           {"München": false}, 
           {"Nürnberg": false},  
           ],
-        heading: "Waelche Stadt zeigt Mellys WhatsApp-Bild? ",
+        heading: "Welche Stadt zeigt Mellys WhatsApp-Bild? ",
         // subHeading: "Kontext zu Frage 2",
-        resultHtml: "Ich hoffe, ich habe es erkannt.",
+        //resultHtml: "Ich hoffe, ich habe es erkannt.",
         //unit: "Mio",
         //precision: 3,
         // lastPointShownAt: ,
