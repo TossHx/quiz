@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+  <meta charset="utf-8">
 
+  <head>
+    <title>November Quiz Teenskreis</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="https://ee2dev.github.io/ydi/css/style.css">
+  </head>
+
+  <body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://ee2dev.github.io/ydi/js/youdrawit.min.js"></script> 
+    <script>
+      var questions = [];
+      var question = {};
+     
+      var globals = { 
+        default: "de",
+         header: "Viel Spass beim Quiz",
+         subHeader: "Versuche die richtige Antwort zu erraten und siehe, wie gut Du warst!",
+         drawAreaTitle: "Was\nmeinst Du?",
+         drawLine: "Zeichne von hier\nden Verlauf zu Ende",
+         drawBar: "Ziehe den Balken\nauf die entsprechende Höhe",
+        // resultButtonText: "Zeig mir die Lösung!",
+         resultButtonTooltip: "Zeichne Deine Einschätzung. Der Klick verrät, ob sie stimmt.",
+         showScore: true,
+        // scoreButtonText: "Zeig mir, wie gut ich war!",
+        // scoreButtonTooltip: "Klicke hier, um das Gesamtergebnis zu sehen",
+         scoreTitle: "Dein Ergebnis:",
+        // scoreHtml: "<b>Ausgezeichnet!!</b>", 
+          scoreHtml: [{lower: 0, upper: 70, html: "<b>Na ja, sprechen wir lieber über das Wetter!!</b>"}, {lower: 70, upper: 101, html: "<b>Welch brain Du bist!!</b>"}],
+      };
+      // ----- for additional questions, copy FROM here
+      question = { 
+        data: [
+          {"1. Dezmber": 1}, 
+          {"Nikolaus": 6}, 
+          {"Luzienfest": 13}, 
+          {"Weihnachten": 25},
+          ],
+        heading: "Wieviele Tage sind es vom 30.November bis",
+        // subHeading: "Wieviele Tage sind es vom 30.November bis",
+        resultHtml: "Luzia, da schwimmen die Lichthäuser auf der Amper",
+        // unit: "Mio",
+        //precision: 1,
+        lastPointShownAt: "1. Dezember",
+        yAxisMin:  0,
+        yAxisMax: 40,
+      };
+      questions.push(question);
+      // ----- for additional questions, copy TO here     
+      // ----- for additional questions, copy FROM here
+      question = {
+        data: 7403,
+        heading: "Wieviele Tage alt ist Julian an seinem Geburtstag in 2018?",
+        // subHeading: "Kontext zu Frage 2",
+        // resultHtml: "897 Tausend wurden exportiert.",
+        //unit: "Tsd",
+        // precision: 4,
+        // lastPointShownAt: ,
+        // yAxisMin: ,
+        // yAxisMax: , 
+      };
+      questions.push(question);
+      // ----- for additional questions, copy TO here  
+      
+      // ----- for additional questions, copy FROM here
+      question = {
+        data: [
+          {"Montag": false}, 
+          {"Dienstag": true}, 
+          {"Mittwoch": false}, 
+          {"Donnerstag": false}, 
+          {"Freitag": false}, 
+          {"Samstag": false}, 
+          {"Sonntag": false}, 
+          ],
+        heading: "A welchem Wochentag wurde Julian geboren? ",
+        // subHeading: "Kontext zu Frage 2",
+          resultHtml: ".. und zwar spät in der Nacht",
+        //unit: "Mio",
+        //precision: 3,
+        // lastPointShownAt: ,
+        // yAxisMin: ,
+        // yAxisMax: , 
+      };
+      questions.push(question);
+      // ----- for additional questions, copy TO here 
+      var myChart = youdrawit
+        .chart()
+        .globals(globals)
+        .questions(questions);
+      d3.select("body")
+        .append("div")
+        .attr("class", "chart")
+        .call(myChart);
+    </script>
+  </body>
+</html>
