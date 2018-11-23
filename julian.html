@@ -30,25 +30,6 @@
         // scoreHtml: "<b>Ausgezeichnet!!</b>", 
           scoreHtml: [{lower: 0, upper: 70, html: "<b>Na ja, sprechen wir lieber über das Wetter!!</b>"}, {lower: 70, upper: 101, html: "<b>Wow, ein Kenner</b>"}],
       };
-      // ----- for additional questions, copy FROM here
-      question = { 
-        data: [
-          {"c": 1}, 
-          {"j+a": 2}, 
-          {"d+i+t": 6}, 
-          {"e+h": 7},
-          ],
-        heading: "Wie viele dieser Buchstaben sind in Julians Namen?",
-        // subHeading: "Wie viele Tage sind es vom 30.November bis",
-        resultHtml: "4x e, 3x h, 2x d+i+n+o+t 1x a+c+g+j+l+r+s+u",
-        // unit: "Mio",
-        precision: 0,
-        lastPointShownAt: "j+a",
-        yAxisMin:  0,
-        //yAxisMax: 40,
-      };
-      questions.push(question);
-      // ----- for additional questions, copy TO here     
       
       // ----- for additional questions, copy FROM here
       question = {
@@ -72,7 +53,27 @@
       };
       questions.push(question);
       // ----- for additional questions, copy TO here 
-      
+
+      // ----- for additional questions, copy FROM here
+      question = { 
+        data: [
+          {"c": 1}, 
+          {"j+a": 2}, 
+          {"d+i+t": 6}, 
+          {"e+h": 7},
+          ],
+        heading: "Wie viele dieser Buchstaben sind in Julians Namen?",
+        // subHeading: "Wie viele Tage sind es vom 30.November bis",
+        resultHtml: "4x e, 3x h, 2x d+i+n+o+t 1x a+c+g+j+l+r+s+u",
+        // unit: "Mio",
+        precision: 0,
+        lastPointShownAt: "j+a",
+        yAxisMin:  0,
+        //yAxisMax: 40,
+      };
+      questions.push(question);
+      // ----- for additional questions, copy TO here     
+
       // ----- for additional questions, copy FROM here
       question = {
         data: 7305,
